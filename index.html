@@ -9,12 +9,13 @@
 </head>
 <body>
     <div class="calculator">
+      <div class="expression" id="expression"></div>
         <input type="text" class="display" id="display" readonly>
-      <!-- <div class="expression" id="expression"></div> -->
+      
       
     
     <div class="buttons">
-        <button id="ac" class="AC"  onclick="('AC')">AC</button>
+        <button id="ac" class="AC"  onclick="ClearAll()">AC</button>
       <button id="c" class="C" onclick="ClearDisplay()">C</button>
       <button id="back" onclick="backspace()">&#x232B;</button>
       <button class="operator" onclick="appendToDisplay('/')">/</button>
@@ -34,7 +35,7 @@
       <button onclick="appendToDisplay('3')">3</button>
       <button onclick="appendToDisplay('+')" class="operator">+</button>
 
-       <button id="sign" onclick="appendToDisplay('&#177;')">&#177;</button>
+       <button id="sign" onclick="toggleSign()">&#177;</button>
       <button onclick="appendToDisplay('0')">0</button>
       <button onclick="appendToDisplay('.')">.</button>
       <button onclick="appendToDisplay('%')"id="equals">%</button>

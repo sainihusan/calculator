@@ -1,78 +1,95 @@
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-body{
-   display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background: #f4f4f4;
-      font-family: Arial, sans-serif;
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #ece9e6, #ffffff);
+  
 }
 
-.calculator{
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    padding: 20px;
-    background: #fff;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+.calculator {
+  border-radius: 16px;
+  padding: 20px;
+  background: #1c1c1c;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  width: 320px;
 }
 
 .display {
-          background: grey;
-    color: #fff;
-    padding: 20px;
-    text-align: right;
-    font-size: 32px;
-     
-    }
+  width: 100%;
+  background: #333;
+  color: #fff;
+  padding: 15px;
+  text-align: right;
+  font-size: 25px;
+  border: none;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  white-space: nowrap;
+  overflow-x: auto;
+}
 
+.expression {
+  font-size: 16px;
+  color: #aaa;
+  text-align: right;
+  
+  height: 20px;
+}
 
-    .expression {
-      font-size: 10px;
-      color: #bbb;
-    }
-    .buttons {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      
-    }
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
 
-    button {
-      padding: 20px;
-      font-size: 23px;
-      border: 1px solid #444;
-      background: black;
-      color: #fff;
-      cursor: pointer;
-      transition: background 0.2s;
-    }
+button {
+  padding: 20px;
+  font-size: 20px;
+  border: none;
+  border-radius: 12px;
+  background: #2d2d2d;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
 
-    button:hover {
-      background: #444;
-    }
-    .operator {
-      background: #ff9500;
-    }
-    .operator:hover {
-      background: #e08900;
-    }
-    .span-2 {
-      grid-column: span 4;
-      background-color: green;
-    }
+button:hover {
+  background: #444;
+}
 
-    .C{
-        background-color: rgb(153, 35, 35);
-    }
-    .AC{
-        background-color: rgb(153, 35, 35);
-    }
+button:active {
+  transform: scale(0.75);
+}
 
-    .C:hover{
-        background-color: darkred;
-    }
-    .AC:hover{
-        background-color: darkred;
-    }
+.operator {
+  background: #ff9500;
+  color: #fff;
+}
+
+.operator:hover {
+  background: #e08900;
+}
+
+.span-2 {
+  grid-column: span 4;
+  background: #28a745;
+}
+
+.span-2:hover {
+  background: #218838;
+}
+
+.C, .AC {
+  background-color: #d9534f;
+}
+
+.C:hover, .AC:hover {
+  background-color: #c9302c;
+}
