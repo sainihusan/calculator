@@ -31,8 +31,7 @@ body {
   border: none;
   border-radius: 8px;
   margin-bottom: 10px;
-  white-space: nowrap;
-  overflow-x: auto;
+  
 }
 
 .expression {
