@@ -21,6 +21,7 @@ body {
   width: 320px;
 }
 
+
 .display {
   width: 100%;
   background: #333;
@@ -39,7 +40,9 @@ body {
   color: #aaa;
   text-align: right;
   
-  height: 20px;
+  height: 40px;
+  overflow-x: auto;
+  flex-wrap: nowrap;
 }
 
 .buttons {

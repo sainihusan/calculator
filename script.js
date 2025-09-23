@@ -6,10 +6,20 @@ function appendToDisplay(input) {
   if (input === '&times') input = '*';
   if (input === '&divide') input = '/';
 
-  display.value += input;
+  // If display is "0", replace it instead of appending
+  if (display.value === "0") {
+    // Allow operators after 0, but replace 0 if a digit is typed
+    if (!isNaN(input)) {
+      display.value = input;
+    } else {
+      display.value += input;
+    }
+  } else {
+    display.value += input;
+  }
+
   expressionBox.textContent = display.value;
 }
-
 // Clear only display
 function ClearDisplay() {
   display.value = "";
@@ -53,6 +63,7 @@ function Calculate() {
     display.value = "Error";
   }
 }
+
 
 // ✅ Keyboard input support
 document.addEventListener('keydown', function(event) {
